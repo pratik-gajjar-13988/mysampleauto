@@ -1,0 +1,41 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo Suite" verbose="0">
+
+
+	<test name="BDD mobile native android example" enabled="true">
+		<parameter name="scenario.file.loc" value="scenarios/samplesuite.bdd" />
+		<parameter name="env.resources" value="resources/mobile/android" />
+		<classes>
+			<class name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory"></class>
+		</classes>
+	</test>
+
+	<test name="BDD mobile web with iOS example" enabled="false">
+		<parameter name="scenario.file.loc" value="scenarios/samplesuite.bdd" />
+		<parameter name="env.resources" value="resources/mobile/mobileweb" />
+		<classes>
+			<class name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory"></class>
+		</classes>
+	</test>
+
+
+	<test name="Gherkin native example" enabled="false">
+		<parameter name="scenario.file.loc" value="scenarios/samplesuite.feature" />
+		<parameter name="env.resources" value="resources/mobile/ios" />
+		<classes>
+			<class
+				name="com.qmetry.qaf.automation.step.client.gherkin.GherkinScenarioFactory"></class>
+		</classes>
+	</test>
+	
+	
+	<test name="BDD web example" enabled="false">
+		<parameter name="scenario.file.loc" value="scenarios/samplesuite.bdd" />
+		<parameter name="env.resources" value="resources/web" />
+		<parameter name="step.provider.pkg" value="com.my.infostretch.web.steps" />
+		<classes>
+			<class name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory"></class>
+		</classes>
+	</test>
+
+</suite>
